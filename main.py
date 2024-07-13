@@ -19,17 +19,15 @@ def msg(msg):
     user_id = msg.from_user.id
     if msg.text == 'Заказать услугу':
         bot.send_message(user_id, 'Оставьте свой номер телефона',
-                         reply_markup=bt.num_button())
+                         reply_markup=bt.order())
     elif msg.text == 'Об услугах':
         bot.send_message(user_id, "Бот еще не доделан, когда додалаю тут появится инфа")
     elif msg.text == 'Цены':
-        bot.send_message(user_id, "Бот еще не доделан, когда додалаю тут появится инфа")
+        bot.send_message(user_id, "Тут типа цены написаны")
     elif msg.text == 'О нас':
-        bot.send_message(user_id, "Бот еще не доделан, когда додалаю тут появится инфа")
+        bot.send_message(user_id, "Тут типа о компании, о сотрудниках")
     elif msg.text == 'Связаться с нами':
-        bot.send_message(user_id, "Бот еще не доделан, когда додалаю тут появится инфа")
-#    elif msg.text == 'Назад':
-#        bot.send_message('Назад в меню', reply_markup=bt.main_menu())
+        bot.send_message(user_id, "А тут будет типа номер, ссылки всякие")
 
 
 bot.polling(non_stop=True)

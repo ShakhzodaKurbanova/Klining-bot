@@ -13,10 +13,13 @@ def main_menu():
     return kb
 
 
-def num_button():
+def order():
     kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
     but1 = types.KeyboardButton('Отправить мой номер 📞', request_contact=True)
     but2 = types.KeyboardButton('Назад')
     kb.add(but1)
     kb.row(but2)
     return kb
+
+def service():
+    kb = types.ReplyKeyboardMarkup(resize_keyboard=True)
